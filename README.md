@@ -23,7 +23,7 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 
 2. **Signal Processing and Direction Detection:**
    - The Arduino processes the raw EOG signal and sends the data to a Python script via serial communication.
-   - The Python script simply forwards the detected commands to simulate arrow key presses.
+   - The Python script uses the `pynput.keyboard` library to simulate arrow key presses based on detected commands.
 
 3. **Game Control Interface:**
    - The detected eye movements are mapped to game controls (e.g., arrow keys for **2048** or movement keys for **Snake**).
@@ -42,6 +42,9 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 ### Software:
 - Arduino IDE for programming the microcontroller.
 - Python 3.x (basic setup for serial communication and keyboard input).
+- Libraries:
+  - `pynput` (for simulating keyboard input)
+  - `SimpleKalmanFilter` (for signal filtering on Arduino).
 
 ---
 
@@ -53,10 +56,8 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
      **Horizontal Electrode Placement:**
      ![image](https://github.com/user-attachments/assets/d22ad764-3116-4f31-b906-622bcbe07e42)
 
-
      **Vertical Electrode Placement:**
      ![image](https://github.com/user-attachments/assets/7551db7a-bd91-4c22-b9fc-f049812a3f0e)
-
 
    - Connect the electrodes to the bio-amplifier, and then to the Arduino-compatible microcontroller.
    - Ensure proper grounding to minimize noise.
@@ -73,8 +74,14 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 ## How It Works
 
 1. **Calibrate the System:**
-   - Run the calibration module on the Arduino to record EOG signals for each direction.
-   - Adjust thresholds and save calibration data for consistent detection.
+   - The calibration process involves moving your eyes in specific directions to help the system learn the signal patterns for each movement.
+   - Start with vertical calibration:
+     - Look **up** and then **down**, and repeat this sequence **three times**.
+     - The system records the signal peaks corresponding to these movements.
+   - After completing vertical calibration, proceed with horizontal calibration:
+     - Look **left** and then **right**, and repeat this sequence **three times**.
+     - The system captures the signal changes for left and right movements.
+   - These calibration steps ensure accurate classification of eye movement directions during gameplay.
 
 2. **Detect Eye Movements:**
    - The Arduino processes real-time EOG signals and classifies the direction of eye movement.
@@ -106,7 +113,7 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 
 ---
 
-## Acknowledgments
-This project was supported by the **Undergraduate Research Opportunities Programme (UROP)** at the **National University of Singapore (NUS)**. Special thanks to the project supervisor Chua Dingjuan for guidance and support.
+### Acknowledgments
+<sub>This project was supported by the **Undergraduate Research Opportunities Programme (UROP)** at the **National University of Singapore (NUS)**. Special thanks to the project supervisor Chua Dingjuan for guidance and support.</sub>
 ---
 
