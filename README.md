@@ -107,6 +107,6 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 ---
 
 ## Acknowledgments
-This project was supported by the **Undergraduate Research Opportunities Programme (UROP)** at the **National University of Singapore (NUS)**. Special thanks to the project supervisor Chua Dingjuan.
+This project was supported by the **Undergraduate Research Opportunities Programme (UROP)** at the **National University of Singapore (NUS)**. Special thanks to the project supervisor Chua Dingjuan for guidance and support.
 ---
 
