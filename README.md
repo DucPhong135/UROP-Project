@@ -50,11 +50,13 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 1. **Hardware Setup:**
    - Attach electrodes around the eyes following EOG signal placement guidelines. Example placements:
 
-     **Electrode Placement Diagram 1:**
-     *(Insert picture here)*
+     **Horizontal Electrode Placement:**
+     ![image](https://github.com/user-attachments/assets/d22ad764-3116-4f31-b906-622bcbe07e42)
 
-     **Electrode Placement Diagram 2:**
-     *(Insert picture here)*
+
+     **Vertical Electrode Placement:**
+     ![image](https://github.com/user-attachments/assets/7551db7a-bd91-4c22-b9fc-f049812a3f0e)
+
 
    - Connect the electrodes to the bio-amplifier, and then to the Arduino-compatible microcontroller.
    - Ensure proper grounding to minimize noise.
@@ -105,7 +107,6 @@ This project was undertaken as part of the **Undergraduate Research Opportunitie
 ---
 
 ## Acknowledgments
-This project was supported by the **Undergraduate Research Opportunities Programme (UROP)** at the **National University of Singapore (NUS)**. Special thanks to the project supervisor Chua Dingjuan. 
-
+This project was supported by the **Undergraduate Research Opportunities Programme (UROP)** at the **National University of Singapore (NUS)**. Special thanks to the project supervisor Chua Dingjuan.
 ---
 
